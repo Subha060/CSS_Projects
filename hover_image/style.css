@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.gallery {
+  width: 50%;
+  height: 300px;
+  display: flex;
+  gap: 5px;
+}
+
+.gallery img {
+  width: 10%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid silver;
+  border-radius: 10px;
+  transition: all ease 0.5s;
+  cursor: none;
+}
+
+@media screen and (min-width: 700px) {
+  .gallery {
+    width: 70%;
+    height: 400px;
+  }
+  .gallery img {
+    width: 5%;
+    transition: all ease 1s;
+  }
+  .gallery img:hover {
+    margin: 0 40px;
+  }
+}
+
+.gallery img:hover {
+  width: 100%;
+  z-index: 1;
+
+  margin: 0 30px;
+  border: 5px solid silver;
+  border-radius: 25px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 00px 00px 70px white;
+  }
+  100% {
+    box-shadow: 00px 00px 100px white, inset 00px 00px 50px rgb(0, 0, 0);
+    /* box-shadow: 00px 00px 100px currentColor; this attribute is use to automatic coror based on parent color*/
+  }
+}
