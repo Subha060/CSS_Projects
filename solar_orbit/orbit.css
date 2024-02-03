@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://i.postimg.cc/90FypkfW/Stars-wallpaper-HD-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.container {
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 0;
+    margin: 0;
+    animation: rotate 20s linear infinite;
+}
+
+
+.sun {
+    
+    height: 80px;
+    width: 80px;
+    background-color: #e89e2f;
+    border-radius: 50%;
+    box-shadow:
+    0 0 5px 5px #f4a937,  /* inner white */
+    0 0 15px 10px rgb(243, 163, 58), /* middle magenta */
+    0 0 20px 10px rgb(253, 150, 90); /* outer cyan */
+}
+
+
+.earth {
+    position: fixed;
+    top: 93%;
+    width: 60px;
+    height: 60px;
+    background: url('https://i.postimg.cc/sgF0vZ7c/earth-removebg-preview.png') center center no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    animation: rotateCounterclockwis 1s linear infinite;
+}
+
+.earth-inner {
+    width: 120px;
+    height: 120px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.moon {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: #D3D3D3;
+    border-radius: 50%;
+    box-shadow: 
+    0 0 2px 2px #D3D3D3;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateCounterclockwis {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
