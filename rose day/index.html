@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rose Day Special</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* text-transform: capitalize; */
+      }
+
+      body {
+        background-image: url("https://i.postimg.cc/Z53JNLqQ/22472941-120-78.jpg");
+        /* background-image: url('https://i.postimg.cc/SKyCDWDS/Untitled-1.png'); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      /* section {
+        background-image: url("https://i.postimg.cc/8zGMVKYd/pngwing-com-2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+      } */
+      .box {
+        height: 90vh;
+        width: 400px;
+        background-color: rgba(255, 0, 0, 0.34);
+        border-radius: 60px;
+        border: 4px solid rgba(255, 244, 223, 0.956);
+        backdrop-filter: blur(5px);
+        z-index: -1;
+        margin: 10%;
+      }
+
+      h6 {
+        position: relative;
+        left: 40px;
+        color: wheat;
+        font-size: 40px;
+        margin-top: 30px;
+        text-align: left;
+        font-family: "Protest Riot", sans-serif;
+      }
+
+      h1 {
+        font-family: "Protest Riot", sans-serif;
+        color: wheat;
+        text-align: center;
+        font-size: 60px;
+      }
+
+      .flower {
+        height: 250px;
+        width: 250px;
+        /* background-color: white; */
+        background-image: url("https://i.postimg.cc/MKYYVNrv/bouquet-red-roses-valentine-s-day.png");
+        background-size: cover;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        border-radius: 60px;
+        filter: brightness(0.5);
+        filter: drop-shadow(0 0 50px rgb(255, 255, 255));
+      }
+
+      p {
+        margin: 30px 25px;
+        /* text-align: center; */
+        font-size: 30px;
+        font-family: "Times New Roman", Times, serif;
+        color: rgb(254, 244, 225);
+        text-align: left;
+      }
+
+      #anim {
+        position: fixed;
+        width: 90px;
+        height: 90px;
+        z-index: -22;
+        opacity: 1;
+        animation: anim 2s linear infinite;
+        animation: flash 3s linear infinite;
+        filter: brightness(1);
+        filter: drop-shadow(0 0 20px rgb(255, 0, 0));
+      }
+
+      #anim:nth-child(1) {
+        left: 0%;
+        animation-delay: 1s;
+      }
+      #anim:nth-child(2) {
+        left: 20%;
+        animation-delay: 1s;
+      }
+
+      #anim:nth-child(3) {
+        left: 40%;
+        animation-delay: 2s;
+      }
+
+      #anim:nth-child(4) {
+        left: 60%;
+        animation-delay: 4s;
+      }
+
+      #anim:nth-child(5) {
+        left: 80%;
+        animation-delay: 1.5s;
+      }
+
+      #anim:nth-child(6) {
+        left: 90%;
+        animation-delay: 2s;
+      }
+
+      #anim:nth-child(7) {
+        left: 0%;
+        animation-delay: 3s;
+      }
+
+      #anim:nth-child(8) {
+        left: 20%;
+        animation-delay: 2s;
+      }
+
+      #anim:nth-child(9) {
+        left: 40%;
+        animation-delay: 3s;
+      }
+
+      #anim:nth-child(10) {
+        left: 60%;
+        animation-delay: 3.5s;
+      }
+      #anim:nth-child(11) {
+        left: 80%;
+        animation-delay: 2s;
+      }
+
+      #anim:nth-child(12) {
+        left: 90%;
+        animation-delay: 3s;
+      }
+
+      #anim:nth-child(13) {
+        left: 20%;
+        animation-delay: 2s;
+      }
+
+      #anim:nth-child(14) {
+        left: 40%;
+        animation-delay: 3s;
+      }
+
+      #anim:nth-child(15) {
+        left: 60%;
+        animation-delay: 3.5s;
+      }
+
+      #anim:nth-child(16) {
+        left: 80%;
+        animation-delay: 2s;
+      }
+
+      #anim:nth-child(17) {
+        left: 90%;
+        animation-delay: 3s;
+      }
+
+      @keyframes anim {
+        0%,
+        100% {
+          transform: scale(0.8);
+        }
+
+        50% {
+          transform: scale(1.2);
+        }
+      }
+
+      @keyframes flash {
+        0% {
+          top: -10%;
+        }
+
+        100% {
+          top: 120%;
+        }
+      }
+
+      @media (max-width: 700px) {
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-image: url("https://i.postimg.cc/SKyCDWDS/Untitled-1.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .box {
+          width: 80%;
+          height: 70vh;
+        }
+        h6 {
+          font-size: 30px;
+        }
+        h1 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <img
+        id="anim"
+        src="https://i.postimg.cc/tC3HP36B/pngwing-com.png"
+        alt="Heart"
+      />
+      <section>
+        <div class="box">
+          <h6>Happy</h6>
+          <h1>Rose Day</h1>
+          <p>
+            Dear Disha, <br />
+
+            You are my beautiful rose. You make me happy and hopeful. I love you
+            and appreciate you. Happy Rose Day, my love! Yours always, Anik.
+          </p>
+          <div class="flower"></div>
+        </div>
+      </section>
+    </center>
+  </body>
+</html>
