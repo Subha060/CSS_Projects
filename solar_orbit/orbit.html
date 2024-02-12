@@ -3,120 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="orbit.css"> -->
-
+    <link rel="stylesheet" href="orbit.css">
     <style>
         * {
-    margin: 0;
-    padding: 0;
-}
-
-.background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  body {
     height: 100vh;
-    margin: 0;
-    background-image: url('https://i.postimg.cc/90FypkfW/Stars-wallpaper-HD-desktop.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-
-.container {
-    height: 50vh;
-    width: 50vh;
+    width: 100vw;
+    background-color: #181818;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  
+  .container {
+    height: 500px;
+    width: 500px;
     border-radius: 50%;
-    border: 1px solid white;
-    padding: 0;
-    margin: 0;
-    animation: rotate 20s linear infinite;
-}
-
-
-.sun {
-    
-    height: 80px;
-    width: 80px;
-    background-color: #e89e2f;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    height: 500px;
+    width: 500px;
     border-radius: 50%;
-    box-shadow:
-    0 0 5px 5px #f4a937,  /* inner white */
-    0 0 15px 10px rgb(243, 163, 58), /* middle magenta */
-    0 0 20px 10px rgb(253, 150, 90); /* outer cyan */
-}
-
-
-.earth {
-    position: fixed;
-    top: 93%;
-    width: 60px;
-    height: 60px;
-    background: url('https://i.postimg.cc/sgF0vZ7c/earth-removebg-preview.png') center center no-repeat;
-    background-size: cover;
+    background-image: conic-gradient(
+      transparent 180deg,
+      transparent 20deg,
+      rgb(255, 255, 255) 400deg
+    );
+    animation: rotate 4s linear infinite;
+  }
+  
+  .container::after {
+    content: "";
+    height: 490px;
+    width: 490px;
     border-radius: 50%;
-    animation: rotateCounterclockwis 1s linear infinite;
-}
-
-.earth-inner {
-    width: 120px;
-    height: 120px;
-    border: 1px solid white;
+    background-color: #181818;
+    position: absolute;
+  }
+  
+  .sun {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    z-index: 5;
+    background-color: rgb(255, 225, 0);
+    /* box-shadow: inset 0 0 60px 40px orange; */
+    border-radius: 50%;
+    animation: glow 3s alternate infinite;
+  }
+  
+  .earth_orbit {
+    height: 500px;
+    width: 500px;
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.moon {
-    position: fixed;
-    height: 30px;
-    width: 30px;
-    background-color: #D3D3D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 4s linear infinite;
+  }
+  
+  .moon_orbit {
+      height: 120px;
+      width: 120px;
+      z-index: 5;
+      position: relative;
+      top: -250px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .moon_orbit::before {
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
-    box-shadow: 
-    0 0 2px 2px #D3D3D3;
-    animation: rotate 3s linear infinite;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
+    background-image: conic-gradient(
+      transparent 180deg,
+      transparent 20deg,
+      rgb(255, 255, 255) 400deg
+    );
+    transform: rotate(190deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 2s linear infinite;
+  }
+  
+  .moon_orbit::after {
+      content: "";
+      height: 115px;
+      width: 115px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: #181818;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .moon_container {
+      height: 132px;
+      width: 132px;
+      position: absolute  ;
+      z-index: 1;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: rotate 2s linear infinite;
+  }
+  .moon {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: inset 0 0 10px 1px wheat,
+      0 0 10px 5px wheat;
+      position: relative;
+      top: 60px;
+      z-index: 1;
+  }
+  
+  .earth {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: rgb(80, 144, 234);
+      box-shadow: inset 0 0 20px 2px blue;
+  }
+  
+  @keyframes rotate {
+  0% {
+  rotate: 0deg;
+  }
+  100% {
+  rotate: 360deg;
+  }
+  }
+  
+  @keyframes glow {
+      0%{box-shadow: inset 0 0 60px 40px orange, 0 0 40px 7px orange;}
+      50%{box-shadow: inset 0 0 60px 40px orange, 0 0 40px 14px orange;}
+      100%{box-shadow: inset 0 0 60px 40px orange, 0 0 40px 21px orange;}
+  }
+  
+  
+  @media screen and (max-width: 700px) {
+    * {
+      transform: scale(0.8);
     }
-    100% {
-        transform: rotate(360deg);
+  }
+  
+  @media screen and (max-width: 700px) {
+    body {
+      justify-content: center;
+      padding: 20px;
     }
-}
-@keyframes rotateCounterclockwis {
-    0% {
-        transform: rotate(360deg);
+  
+    .container {
+      height: 300px;
+      width: 300px;
     }
-    100% {
-        transform: rotate(0deg);
+  
+    .container::before {
+      height: 300px;
+      width: 300px;
     }
-}
+  
+    .container::after {
+      height: 290px;
+      width: 290px;
+    }
+  
+    .sun {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .earth_orbit {
+      height: 300px;
+      width: 300px;
+    }
+  
+    .moon_orbit {
+      height: 60px;
+      width: 60px;
+      top: -150px;
+    }
+    .moon_container {
+        height: 70px;
+      width: 70px;
+    }
+  }
+  
     </style>
-
+    <title>Solar System</title>
 </head>
 <body>
-    <div class="background">
-        <div class="container">
-            <div class="containera"></div>
+    <div class="container">
         <div class="sun"></div>
-        <div class="earth">
-            <div class="earth-inner">
-                <div class="moon"></div>
-            </div>
-        </div>
     </div>
-</div>
-<script>
-    alert("this is just a try version");
-</script>
+    <div class="earth_orbit">
+        <div class="moon_orbit">
+            <div class="moon_container">
+                <div class="moon"></div>
+                <div class="earth"></div>
+            </div>
+    </div>
 </body>
 </html>
