@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Fredericka+the+Great&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  text-transform: capitalize;
+  font-family: "Berkshire Swash", serif;
+}
+
+body {
+  color: white;
+  background-color: black;
+  position: relative;
+}
+
+.navbar {
+  padding-top: 10px;
+  height: 60px;
+  width: 40%;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+  text-decoration: none;
+  list-style: none;
+  gap: 10px;
+}
+.nav {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+.nav_a {
+  padding: 30px 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s linear;
+  opacity: 0.6;
+}
+
+.nav:hover {
+  border-bottom: 2px solid rgb(0, 255, 162);
+  border-radius: 20px;
+  transform: scale(1.1);
+  opacity: 1;
+  box-shadow: 0px 100px 800px 10px rgba(0, 255, 162, 0.357);
+}
+.GitHub:hover {
+  border-bottom: 2px solid rgb(128, 0, 255);
+  box-shadow: 0px 100px 800px 10px rgba(128, 0, 255, 0.678);
+}
+.Facebook:hover {
+  border-bottom: 2px solid rgb(0, 76, 255);
+  box-shadow: 0px 100px 800px 10px rgba(0, 76, 255, 0.678);
+}
+.Instagram:hover {
+  border-bottom: 2px solid rgb(255, 13, 178);
+  box-shadow: 0px 100px 800px 10px rgba(255, 13, 178, 0.357);
+}
+
+.nav:hover a {
+  color: rgb(0, 255, 162);
+  opacity: 1;
+}
+.GitHub:hover a {
+  color: rgb(128, 0, 255);
+  opacity: 1;
+}
+.Instagram:hover a {
+  color: rgb(255, 13, 178);
+  opacity: 1;
+}
+.Facebook:hover a {
+  color: rgb(0, 109, 218);
+  opacity: 1;
+}
+
+.nav_hr {
+  width: 97%;
+  margin-left: 20px;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  background-image: url("https://source.unsplash.com/collection/190727/1600x900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 150%;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+#main_section {
+  height: 100vh;
+  width: 100%;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 70%;
+  padding: 0 50px;
+  line-height: 20px;
+}
+
+.heading {
+  margin: 50px 0 40px;
+  font-size: 50px;
+  color: rgb(40, 255, 183);
+}
+
+.head_hr {
+  margin: 20px 0 30px 0px;
+  width: 90vw;
+}
+.buttom_hr {
+  margin: 50px 0 40px 0px;
+  width: 90vw;
+  height: 15px;
+}
+
+#main_p {
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+  background-color: transparent;
+}
+
+
+.p_li {
+  ul {
+    list-style: none;
+  }
+}
+
+
+#project {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+
+.project_head {
+  font-size: 50px;
+  text-align: left;
+  color: #00ffbf;
+}
+
+.project_p {
+    padding: 5px 0 20px 30px;
+    line-height: 20px;
+}
+
+
+.project_p>a {
+    text-decoration: none;
+    color: rgb(127, 255, 212);
+}
+
+p {
+  font-family: "Texturina", serif;
+}
+    </style>
+</head>
+
+<body>
+    <section id="container">
+        <div class="container">
+            <ul class="navbar">
+                <li class="nav GitHub"><a href="https://github.com/Subha060" class="nav_a">GitHub</a></li>
+                <li class="nav Facebook"><a href="https://www.facebook.com/shubha.adak.336" class="nav_a">Facebook</a></li>
+                <li class="nav Instagram"><a href="https://www.instagram.com/subha_adak_/" class="nav_a">Instagram</a></li>
+                <!-- <li class="nav"><a href="#">Contact</a></li> -->
+            </ul>
+            <!-- <hr class="nav_hr"> -->
+        </div>
+        <div>
+            <section id="main_section">
+                <!-- <h1 id="about">About</h1> -->
+                <!-- <hr class="side_hr"> -->
+                <div id="main">
+                    <h1 class="heading">Welcome to coding world</h1>
+                    <hr class="head_hr">
+                    <p id="main_p">
+                    <ul>
+                        <br>
+                        <li class="p_li">🚀Embark on a Journey of Creativity
+                            <br>
+
+                            I believe in the beauty and potential of every line of code. Our passion lies in crafting
+                            stunning projects that showcase the elegance and versatility of HTML and CSS.
+                        </li>
+
+                        <br>
+                        <li class="p_li">✨ Discover the Magic of Web Development
+                            <br>
+
+                            Step into a world where creativity knows no bounds. Explore our curated collection of small
+                            yet mighty projects, each a testament to the artistry and innovation of web design. From
+                            sleek and modern layouts to whimsical and interactive interfaces, there's something here to
+                            spark your imagination.
+                        </li>
+
+                        <br>
+                        <li class="p_li">🎨 Unleash Your Creativity
+                            <br>
+
+                            Whether you're a seasoned developer or just starting out, our projects are designed to
+                            inspire and empower you on your coding journey. Let your creativity soar as you dive into
+                            the world of HTML and CSS, where every line of code is a brushstroke on the canvas of the
+                            web.
+                        </li>
+
+                        <br>
+                        <li class="p_li">🌟 Join Us on the Adventure
+                            <br>
+
+                            Ready to embark on an adventure in web development? Come along for the ride as we explore
+                            the possibilities of HTML and CSS together. Let's turn dreams into reality and transform
+                            ideas into stunning digital experiences.
+                        </li>
+                    </ul>
+                    <hr class="buttom_hr">
+                    </p>
+                </div>
+                <div id="project">
+                    <h1 class="project_head">my projects</h1>
+                    <ul>
+                        <li>
+                            <h3>Border Animation:</h3>
+                            <p class="project_p">This code is an HTML document that creates a centered box with a
+                                rotating border animation. The box has a circular shape, a shadow, and a background
+                                color. The border animation is achieved using CSS keyframes and transforms. Click here to check =>
+                            <a href="https://css-projects-three.vercel.app/Box%20animation/index.html">Border
+                                Animation</a></p> <li>
+                            <h3>Hover Image Effect:</h3>
+                            <p class="project_p">
+                                This HTML document creates a webpage titled "IMG hover" with a linked stylesheet. It
+                                contains two divs: an empty "cursor" div and a "gallery" div. The "gallery" div includes
+                                multiple images with source URLs and alt attributes. The exact layout and functionality
+                                depend on the linked CSS file. Click here to check =>
+                            <a href="https://css-projects-three.vercel.app/hover_image/index.html">Hover Image
+                                Effect</a>
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Rose Day Special:</h3>
+                            <p class="project_p">This is an HTML document for a "Rose Day" greeting. It includes a CSS
+                                style block for styling the page and elements. The body contains multiple images with
+                                animations, and a section with a message box. The box includes a greeting and a message,
+                                and a decorative flower image. Click here to check =>
+                            <a href="https://css-projects-three.vercel.app/rose%20day/index.html">Rose Day Special</a>
+                        </p>
+                        </li>
+                        <li>
+                            <h3>Earth & Mooon rotation:</h3>
+                            <p class="project_p">
+                                This HTML file, `orbit.html`, creat:es a visual representation of the solar system using
+                                CSS. It includes a rotating sun, earth, and moon. The CSS styles define the size, color,
+                                and animation of these elements. The layout is responsive, adjusting for smaller screen
+                                sizes with media queries. Click here to check =>
+                            <a href="https://css-projects-three.vercel.app/solar_orbit/orbit.html">Earth & Mooon
+                                rotation</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- <label for="selfie">Take a selfie</label>
+        <input type="file" id="selfie" capture = "user"/> -->
+        </div>
+    </section>
+</body>
+
+</html>

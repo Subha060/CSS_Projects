@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Fredericka+the+Great&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  text-transform: capitalize;
+  font-family: "Berkshire Swash", serif;
+}
+
+body {
+  color: white;
+  background-color: black;
+  position: relative;
+}
+
+.navbar {
+  padding-top: 10px;
+  height: 60px;
+  width: 40%;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+  text-decoration: none;
+  list-style: none;
+  gap: 10px;
+}
+.nav {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+.nav_a {
+  padding: 30px 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s linear;
+  opacity: 0.6;
+}
+
+.nav:hover {
+  border-bottom: 2px solid rgb(0, 255, 162);
+  border-radius: 20px;
+  transform: scale(1.1);
+  opacity: 1;
+  box-shadow: 0px 100px 800px 10px rgba(0, 255, 162, 0.357);
+}
+.GitHub:hover {
+  border-bottom: 2px solid rgb(128, 0, 255);
+  box-shadow: 0px 100px 800px 10px rgba(128, 0, 255, 0.678);
+}
+.Facebook:hover {
+  border-bottom: 2px solid rgb(0, 76, 255);
+  box-shadow: 0px 100px 800px 10px rgba(0, 76, 255, 0.678);
+}
+.Instagram:hover {
+  border-bottom: 2px solid rgb(255, 13, 178);
+  box-shadow: 0px 100px 800px 10px rgba(255, 13, 178, 0.357);
+}
+
+.nav:hover a {
+  color: rgb(0, 255, 162);
+  opacity: 1;
+}
+.GitHub:hover a {
+  color: rgb(128, 0, 255);
+  opacity: 1;
+}
+.Instagram:hover a {
+  color: rgb(255, 13, 178);
+  opacity: 1;
+}
+.Facebook:hover a {
+  color: rgb(0, 109, 218);
+  opacity: 1;
+}
+
+.nav_hr {
+  width: 97%;
+  margin-left: 20px;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  background-image: url("https://source.unsplash.com/collection/190727/1600x900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 150%;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+#main_section {
+  height: 100vh;
+  width: 100%;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 70%;
+  padding: 0 50px;
+  line-height: 20px;
+}
+
+.heading {
+  margin: 50px 0 40px;
+  font-size: 50px;
+  color: rgb(40, 255, 183);
+}
+
+.head_hr {
+  margin: 20px 0 30px 0px;
+  width: 90vw;
+}
+.buttom_hr {
+  margin: 50px 0 40px 0px;
+  width: 90vw;
+  height: 15px;
+}
+
+#main_p {
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+  background-color: transparent;
+}
+
+
+.p_li {
+  ul {
+    list-style: none;
+  }
+}
+
+
+#project {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+
+.project_head {
+  font-size: 50px;
+  text-align: left;
+  color: #00ffbf;
+}
+
+.project_p {
+    padding: 5px 0 20px 30px;
+    line-height: 20px;
+}
+
+
+.project_p>a {
+    text-decoration: none;
+    color: rgb(127, 255, 212);
+}
+
+p {
+  font-family: "Texturina", serif;
+}
