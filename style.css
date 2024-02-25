@@ -82,10 +82,11 @@ body {
   opacity: 1;
 }
 
-.nav_hr {
-  width: 97%;
+
+/* .nav_hr {
+  width: 40%;
   margin-left: 20px;
-}
+} */
 
 body::before {
   content: "";
@@ -137,7 +138,6 @@ body::before {
 .buttom_hr {
   margin: 50px 0 40px 0px;
   width: 90vw;
-  height: 15px;
 }
 
 #main_p {
@@ -191,3 +191,79 @@ body::before {
 p {
   font-family: "Times New Roman", Times, serif;
 }
+  /* Existing CSS here... */
+
+  @media only screen and (max-width: 800px) {
+    .navbar{
+      margin-left: 100px;
+    }
+    
+    #main_section {
+      margin-top: 200px;
+    }
+
+    .heading {
+      font-size: 45px;
+    }
+  }
+
+  /* Responsive styles for screens smaller than 600px */
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      margin-left: 40px;
+      width: 60%;
+     padding: 20px;
+    }
+
+    .nav {
+      width: 50%;
+      margin-bottom: 10px;
+      font-size: 20px;
+      padding: 5px;
+    }
+
+    .nav_a {
+      padding-bottom: 15px;
+    }
+
+    #main_section {
+      margin-top: 100%;
+    }
+
+    #main {
+      width: 90%;
+      padding: 0 20px;
+    }
+
+    .heading {
+      font-size: 30px;
+    }
+
+    #main_p {
+      font-size: 16px;
+    }
+
+    #project {
+      width: 90%;
+    }
+
+    .project_head {
+      font-size: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 400px){
+
+    body::before {
+      height: 160%;
+    }
+
+    .heading,.project_head {
+      font-size: 25px;
+    }
+    .buttom_hr {
+      margin-top: 70px;
+    }
+  }
+
+ 
