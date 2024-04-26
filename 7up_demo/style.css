@@ -391,6 +391,7 @@ body {
     width: 50vw;
     height: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .drink-it-left-part {
