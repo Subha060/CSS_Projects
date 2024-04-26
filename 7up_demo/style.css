@@ -9,7 +9,18 @@
 
 body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #009e5f;
+}
+
 
 /* navbar section start */
 
@@ -21,7 +32,7 @@ body {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    z-index: 3;
+    z-index: 10;
 }
 
 .logo {
@@ -146,7 +157,7 @@ body {
 /* hero left side start  */
 .helo_left {
     height: inherit;
-    width: 29%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,7 +229,7 @@ body {
 .featured_image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .hero_right_btn {
@@ -230,7 +241,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10px;
+    padding: 0px 20px;
 }
 
 .play_btn {
@@ -240,7 +251,7 @@ body {
 
 .arrow-right,
 .arrow-left {
-    height: 8vw;
+    height: 7vw;
     max-height: 40px;
 }
 
@@ -275,7 +286,6 @@ body {
 }
 
 #baner_container>.banner_text>h1 {
-
     font-size: 3.5rem;
     font-weight: 800;
     color: white;
@@ -365,12 +375,207 @@ body {
     transform: scale(1.1);
 }
 
-
-
-
 /* cocktail section end */
 
+/* product section start */
 
+#product_section {
+    /* height: 829px; */
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product_image {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+}
+
+.drink-it-left-part {
+    height: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 591px 92.8px 1fr;
+}
+
+.product-carousel {
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-carousel #small-7up {
+    width: 186px;
+    z-index: 5;
+}
+
+.product-carousel #zero-sugar-small-7up,
+.product-carousel #simple-7up {
+    width: 148px;
+    z-index: 3;
+}
+
+.product-carousel #zero-sugar-small-7up {
+    margin-left: 6vw;
+}
+
+.product-carousel #simple-7up {
+    margin-right: 6vw;
+}
+
+.blur-image {
+    width: 121px;
+    filter: blur(5px);
+    margin: 0 -80px;
+}
+
+.product-carousel-nav {
+    width: 100%;
+    height: 100%;
+    grid-row: 2;
+    margin: 0 0 40px;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.product_content {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15vh;
+    padding: 15vh 5vw 0 5vw;
+    background: #ECECEC;
+    z-index: 6;
+}
+.product_content_heading {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.product_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product_content_heading > h1 {
+    letter-spacing: 1px;
+    font-size: 5.3rem;
+    color: #009e5f;
+    font-weight: bolder;
+    padding-right: 100px;
+    line-height: 90px;
+}
+
+.product_content_heading> h1 > span {
+    color: red;
+    margin-left: -25px;
+}
+
+.product_text > p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.25rem;
+    color: #818182;
+    padding-right: 50px;
+}
+
+.product_content > img {
+    width: 70%;
+
+}
+/* product section end */
+
+/* footer section */
+
+.footer-container {
+    width: 100%;
+    height: 50vw;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg,#2cbe95,#40cba1);
+}
+
+.footer-container img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    object-fit: cover;
+    object-position: top;
+}
+
+.footer-container svg {
+    position: absolute;
+    font-weight: 700;
+    top: 20vw;
+    right: 23vw;
+    z-index: 100;
+    scale: 2;
+    object-fit: scale-down;
+}
+
+.footer-container .footer-end {
+    height: 121px;
+    width: 75vw;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffffab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* transition: all 0.4s ease-in-out; */
+    z-index: 100;
+}
+
+.social-media-handles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 5px;
+    font-size: 27px;
+}
+
+.privacy-policy {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 0 30px;
+    font-size: 13px;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.privacy-policy>span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-end #last-line {
+    font-size: 13px;
+    text-wrap: wrap;
+    text-align: center;
+}
+
+
+
+/* footer section end */
 
 
 
@@ -402,12 +607,12 @@ body {
     /* navbar section start */
     #navbar {
         height: 3rem;
-        z-index: 2;
+        z-index: 10;
     }
 
     .logo {
         height: 5rem;
-        z-index: 2;
+        z-index: 11;
     }
 
     .menu_button,
@@ -523,4 +728,77 @@ body {
     }
 
     /* cocktail section end */
+
+    
+/* product section start */
+#product_section {
+    flex-direction: column-reverse;
 }
+
+.product_content {
+    width: 100vw;
+    padding-top: 5vh;
+    gap: 5vh;
+}
+
+.product_content_heading > h1 {
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.product_text > p {
+    padding: 0 10px;
+}
+
+.product_content > img {
+    margin: 0 auto;
+}
+
+.product_image {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.drink-it-left-part {
+    transform: scale(0.7);
+    position: relative;
+    top: -90px;
+}
+
+/* product section end */
+
+/* footer section start */
+
+.footer-container {
+    height: 65vh;
+    width: 100vw;
+}
+
+.footer-container img {
+    /* scale: 1; */
+    object-fit: cover;
+    object-position: -150px -10px;
+}
+.footer-container svg {
+    scale: 0.6;
+    right: 0%;
+    top: 10%;
+}
+
+.footer-container .footer-end {
+    width: 95%;
+    height: 45%;
+}
+
+.footer-end .privacy-policy {
+    text-wrap: nowrap;
+}
+
+.footer-end #last-line {
+    margin-top: 20px;
+}
+/* footer section end */
+}
+
