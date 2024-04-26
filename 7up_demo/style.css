@@ -1,0 +1,526 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* navbar section start */
+
+#navbar {
+    width: 100%;
+    height: 3.5rem;
+    background-color: #009e5f;
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+}
+
+.logo {
+    display: block;
+    height: 6.5rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar_items {
+    list-style: none;
+    width: 25rem;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.option {
+    display: none;
+}
+
+.navbar_items>li {
+    display: block;
+}
+
+.navbar_items>a {
+    width: inherit;
+    text-decoration: none;
+    font-size: 1.024rem;
+    font-weight: bold;
+    color: white;
+    transition: all 0.2s linear;
+}
+
+.navbar_items>a:hover {
+    color: #003f2e;
+}
+
+/* option button for small screen devices start*/
+
+.menu_button {
+    height: 4px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu_button::before,
+.menu_button::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    right: 0px;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu_button::before {
+    top: -10px;
+}
+
+.menu_button::after {
+    top: 10px;
+}
+
+.navigation>input {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 4;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.navigation>input:checked~.menu_button {
+    background: transparent;
+}
+
+.navigation>input:checked~.menu_button::before {
+    top: 0px;
+    transform: rotate(-45deg);
+}
+
+.navigation>input:checked~.menu_button::after {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.menu_button,
+#nav_manu {
+    display: none;
+}
+
+.navigation>input:checked~.navbar_items {
+    height: 40vh;
+}
+
+/* option button for small screen devices end */
+
+/* navbar section start */
+
+/* hero section start*/
+
+#hero_section {
+    width: 100vw;
+    display: flex;
+}
+
+
+/* hero left side start  */
+.helo_left {
+    height: inherit;
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_left_main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.hero_left_main>h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #009e5f;
+}
+
+
+.hero_left_button {
+    width: 200px;
+    height: 50px;
+    background: #fff;
+    border: 3px solid #009e5f;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #009e5f;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.hero_left_button::before {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    height: 110%;
+    width: 110%;
+    background-color: #009e5f;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn_link:hover .hero_left_button::before {
+    transform: translateX(0);
+}
+
+.btn_link:hover .hero_left_button {
+    color: white;
+}
+
+/* hero left side end  */
+
+/* hero right side start  */
+
+.hero_right {
+    width: 70vw;
+    height: 100%;
+    position: relative;
+}
+
+.featured_image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero_right_btn {
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.play_btn {
+    width: 9vw;
+    min-width: 100px;
+}
+
+.arrow-right,
+.arrow-left {
+    height: 8vw;
+    max-height: 40px;
+}
+
+.featured_image_mobile {
+    display: none;
+}
+
+/* hero left side end  */
+
+/* hero section end */
+
+
+/* green 7up background banner start  */
+
+#baner_container {
+    width: 100vw;
+    background-color: #039f5e;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.banner_text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    left: 10vw;
+    top: 30vh;
+}
+
+#baner_container>.banner_text>h1 {
+
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+#baner_container>.banner_text>p {
+    font-size: 1.75rem;
+}
+
+#baner_container>img {
+    height: 100%;
+}
+
+.banner_btn {
+    height: 70px;
+}
+
+
+/* green 7up background banner end  */
+
+
+/* cocktail section start */
+
+.recipes-banner-container {
+    width: 100%;
+    height: 90vw;
+    max-height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+
+#digital-recipes {
+    display: none;
+}
+
+#cocktail-recipes {
+    background-image: url("images/module_cocktail.jpg");
+    background-attachment: fixed;
+}
+
+#cooking-recipes {
+    background-image: url("images/module_cooking.jpg");
+    background-attachment: fixed;
+}
+
+#all-recipes {
+    background-image: url("images/module_seeall.jpg");
+    background-attachment: fixed;
+}
+
+.recipes-btn {
+    border: 0;
+    width: 30vw;
+    height: 15vh;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    transition: transform 0.3s;
+}
+
+#cocktail-recipes .recipes-btn {
+    background-color: #FE5887;
+}
+
+#cooking-recipes .recipes-btn {
+    background-color: #6BA13F;
+}
+
+#all-recipes .recipes-btn {
+    background-color: #C064AC;
+}
+
+#digital-recipes .recipes-btn {
+    background-color: #fff;
+    color: #009e5f;
+}
+
+.recipes-banner-container:hover .recipes-btn {
+    transform: scale(1.1);
+}
+
+
+
+
+/* cocktail section end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 550px) {
+
+    /* navbar section start */
+    #navbar {
+        height: 3rem;
+        z-index: 2;
+    }
+
+    .logo {
+        height: 5rem;
+        z-index: 2;
+    }
+
+    .menu_button,
+    #nav_manu {
+        display: block;
+    }
+
+
+    .navbar_items>a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    .navbar_items {
+        position: fixed;
+        left: 0px;
+        top: 3rem;
+        flex-direction: column;
+        width: 100%;
+        max-height: 400px;
+        height: 0px;
+        background-color: #009e5f;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        z-index: 0;
+    }
+
+    .navbar_items>a {
+        height: 25%;
+        width: 100%;
+    }
+
+    /* navbar section end */
+
+    /* hero section start */
+
+    #hero_section {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .hero_left {
+        width: 100%;
+    }
+
+    .hero_right {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .featured_image {
+        object-fit: contain;
+        display: none;
+    }
+
+    .featured_image_mobile {
+        margin-top: 5vh;
+        width: 100%;
+        display: block;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .helo_left {
+        width: 100%;
+        height: 90vw;
+        padding-bottom: 10vh;
+    }
+
+    .helo_left>img {
+        width: 50%;
+        object-fit: contain;
+    }
+
+    /* hero section end */
+
+
+    /* green 7up background banner start  */
+
+    #baner_container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 5vh;
+    }
+
+    #baner_container>img {
+        width: 100%;
+    }
+
+    .banner_text {
+        position: static;
+        text-align: center;
+    }
+
+    #baner_container>.banner_text>h1 {
+        font-size: 2.5rem;
+    }
+
+    #baner_container>.banner_text>p {
+        font-size: 1.25rem;
+    }
+
+    /* green 7up background banner end  */
+
+    /* cocktail section start */
+
+    .recipes-btn {
+        width: 70vw;
+        height: 8vh;
+        font-size: 1.5rem;
+    }
+
+    /* cocktail section end */
+}
