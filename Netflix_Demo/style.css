@@ -12,6 +12,7 @@
 hmtl,body {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    background-color: #000;
 }
 ::-webkit-scrollbar {
     width: 5px;
@@ -120,7 +121,8 @@ hmtl,body {
 
 .input {
     width: 100%;
-    height: 220px;
+    /* height: 220px; */
+    height: auto;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -214,11 +216,129 @@ hmtl,body {
     object-fit: cover;
 }
 
+#faq_section {
+    width: 100vw;
+    background-color: #000;
+    border-top: 10px solid #232323;
+    padding: 10vh 0;
+    color: #fff;
+    text-align: center;
+}
+
+#faq_section > h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.accordion {
+    margin: 35px auto;
+    width: 90vw;
+    max-width: 1200px;
+}
+
+.accordion > li {
+    list-style: none;
+    width: 100%;
+}
+
+.accordion > li > label {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background-color: #2d2d2d;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 5px 0;
+    position: relative;
+}
 
 
+.accordion > li > label::before {
+    position: absolute;
+    content: "+";
+    font-size: 2.5rem;
+    font-weight: 200;
+    right: 20px;
+    transition: all 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
 
 
+.accordion > li > .content  {
+    background-color: #2d2d2d;
+    padding: 0 25px;
+    text-align: left;
+    font-size: 1.2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0.5s;
+}
 
+input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 20px 20px;
+}
+
+input[type="radio"]:checked + label::before {
+    transform: rotate(135deg);
+}
+
+
+.accordion > li > label:hover {
+    background-color: #414141;
+}
+
+#faq_section > small {
+    font-size: 1.25rem;
+    margin: 30px;
+    display: block;
+}
+
+
+#footer_section {
+    padding: 60px 20% 60px 10%;
+    border-top: 10px solid #232323;
+    color: #b6b6b6;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer_section > h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer_link {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 30px 0;
+}
+
+.footer_link > .col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer_link > .col > a{
+    color: #b6b6b6;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+#footer_section > h3 {
+    font-size: 14px;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+#footer_section > .language {
+    width: 130px;
+}
 
 
 
@@ -296,8 +416,46 @@ hmtl,body {
     padding: 0 15px;
 }
 
+#faq_section > h1 {
+    font-size: 2rem;
+}
+.accordion  {
+    font-weight: 300;
+}
 
-  }
+.accordion > li > label {
+    font-size: 1.125rem;
+    padding-left: 15px;
+    font-weight: 300;
+    padding: 20px;
+}
+
+.accordion > li > label::before {
+    right: 15px;
+}
+
+.accordion > li > .content {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+#faq_section > small {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 10vw;
+}
+
+#footer_section {
+    padding: 25px 7% 30px 5%;
+}
+
+.footer_link {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+}
 
   @media only screen and (min-width: 480px) and (max-width: 1050px) {
     #header_section {
