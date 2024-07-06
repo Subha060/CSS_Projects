@@ -21,7 +21,7 @@ You can check out the live demo of this project [here](https://css-testing-subha
 
 To run this project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/Subha060/CSS_Projects/tree/main/7up_demo`
+1. Clone the repository: `git clone https://github.com/Subha060/CSS_Projects/tree/main/Netflix_Demo`
 2. Open the `index.html` file in your preferred web browser.
 
 ## Contributing
