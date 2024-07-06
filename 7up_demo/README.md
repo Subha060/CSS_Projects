@@ -1,21 +1,23 @@
-# Netflix Demo
+# 7up Website Clone
 
-This project is a copy of the Netflix website. It aims to showcase my HTML and CSS skills by replicating the design and functionality of the original Netflix site.
+Welcome to the GitHub repository of our 7up Website Clone project! This project is a meticulous recreation of the 7up website, designed to showcase our frontend development skills, including responsive design, modern CSS techniques, and interactive JavaScript features.
 
 ## Preview
 
-You can check out the live demo of this project [here](https://css-testing-subha.vercel.app/Netflix_Demo/index.html).
-
-## Technologies Used
-
-- HTML
-- CSS
+Experience the live version of our 7up clone here: [7up Website Clone Live Preview](https://css-testing-subha-rlz4aea7d-subha-adaks-projects.vercel.app/7up_demo/index.html)
 
 ## Features
 
-- Responsive design
-- Interactive elements
-- Dynamic content
+- **Responsive Design:** Ensures a seamless viewing experience across various devices and screen sizes.
+- **Interactive Elements:** Engage with dynamic components that enhance user interaction.
+- **Modern CSS:** Utilizes the latest CSS features for styling and animations, providing a sleek and modern look.
+- **Optimized Performance:** Fast loading times and optimized images for an efficient browsing experience.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
 
 ## Installation
 
