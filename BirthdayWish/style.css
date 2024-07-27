@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Playwrite+AR:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Playwrite+AR:wght@100..400&family=Playwrite+BE+WAL:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.Ground {
+  width: 880px;
+  height: 1800px;
+  position: absolute;
+  top: 130px;
+  left: 150px;
+}
+
+.top {
+  width: 880px;
+  height: 1800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 4px 4px currentColor);
+}
+
+.mainContainer {
+  height: 100vh;
+  width: 100%;
+  background: url("./public/background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  height: 75vh;
+  width: 85%;
+  border-radius: 50px;
+  padding: 10px 40px;
+  border: 10px solid rgba(255, 241, 241, 0.599);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header {
+  background-image: linear-gradient(45deg, #0b5ae3 0%, #fc00ff 50%);
+  background-clip: text;
+  /* width: 70%; */
+  padding-top: 35px;
+  filter: drop-shadow(0px 4px 4px currentColor);
+}
+
+.header>h1:nth-child(1) {
+  font-size: 4.5rem;
+  color: transparent;
+  font-family: "Protest Riot", sans-serif;
+  margin: 0 60px;
+}
+
+.header>h1:nth-child(2) {
+  font-size: 5.5rem;
+  color: transparent;
+  margin: 0 120px;
+  font-family: "Calistoga", serif;
+}
+
+.text {
+  font-size: 1.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-clip: text;
+}
+
+.text > h4 {
+  color: transparent;
+}
+.text > p {
+  color: transparent;
+}
